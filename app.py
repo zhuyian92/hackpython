@@ -37,7 +37,7 @@ def webhook():
 
 def processRequest(req):
     if req.get("result").get("action") != "yahooWeatherForecast":
-        outcome += req.get("body").get("result").get("fulfillment").get("speech")
+        outcome += req.get("result").get("fulfillment").get("speech")
         return {
             "speech": outcome,
             "displayText": outcome,
